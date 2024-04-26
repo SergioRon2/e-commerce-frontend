@@ -3,31 +3,32 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Image from 'next/image'
 
-export default function Products(){
+export default function ProductsComponent({ cantidadProductos = 5000 }){
 
-    const [photos, setPhotos] = useState([])
+    const [products, setProducts] = useState([])
 
     useEffect(()=>{
-        const fetchPhotos = async() =>{
+        const fetchproducts = async() =>{
             const res = await axios.get('https://jsonplaceholder.typicode.com/photos')
-            setPhotos(res.data)
+            const randomizedProducts = res.data.sort(() => Math.random() - 0.5);
+            setProducts(randomizedProducts.slice(0, cantidadProductos))
             console.log(res)
         }
-        fetchPhotos()
-    }, [])
+        fetchproducts()
+    }, [cantidadProductos])
 
     return (
         <main className='relative flex flex-wrap w-full justify-center items-center gap-8 my-8'>
             {
-                photos.slice(0, 100).map((photo:any)=>(
-                    <div key={photo.id}>
+                products.slice(0, 100).map((product:any)=>(
+                    <div key={product.id} className='animate-fade-up'>
                         <div className="relative flex w-64 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                             <div className="relative mx-4 mt-4 h-60 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
                             <Image
                                 width={256}
                                 height={256}
-                                alt={photo.thumbnailUrl}
-                                src={photo.url}
+                                alt={product.thumbnailUrl}
+                                src={product.url}
                                 className="h-full w-full object-cover"
                             />
                             </div>

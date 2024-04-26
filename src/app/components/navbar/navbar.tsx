@@ -43,7 +43,7 @@ export default function Navbar(){
             data-twe-collapse-item>
             <a
                 className="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
-                href="#">
+                href={'/'}>
                 <Image
                 src={Logo}
                 height={25}
@@ -57,28 +57,29 @@ export default function Navbar(){
                 className="list-style-none me-auto flex flex-col ps-0 lg:flex-row"
                 data-twe-navbar-nav-ref>
                 <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                <a
+                    className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                    href={'/'}
+                    data-twe-nav-link-ref
+                    >Inicio</a>
+                </li>
+
+
+                <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
                 
                 <a
                     className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                    href="#"
+                    href={'/'}
                     data-twe-nav-link-ref
-                    >Dashboard</a>
+                    >Historial</a>
                 </li>
                 
                 <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
                 <a
                     className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                    href="#"
+                    href={'/products'}
                     data-twe-nav-link-ref
-                    >Team</a>
-                </li>
-                
-                <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                <a
-                    className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                    href="#"
-                    data-twe-nav-link-ref
-                    >Projects</a>
+                    >Productos</a>
                 </li>
             </ul>
             
