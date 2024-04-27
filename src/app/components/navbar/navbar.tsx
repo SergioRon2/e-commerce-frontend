@@ -2,7 +2,6 @@
 import { Collapse, Dropdown, initTWE } from "tw-elements";
 import { useEffect } from "react";
 import Image from "next/image";
-import Logo from '../../../../public/Logo.png'
 
 
 export default function Navbar(){
@@ -45,7 +44,7 @@ export default function Navbar(){
                 className="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
                 href={'/'}>
                 <Image
-                src={Logo}
+                src={'/favicon.ico'}
                 height={25}
                 width={25}
                 alt="TE Logo"
