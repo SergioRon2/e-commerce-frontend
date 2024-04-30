@@ -57,14 +57,14 @@ const Login = () => {
                     type="submit"
                     className="flex w-full justify-center rounded-md bg-gradient-to-r from-blue-900 to-blue-950 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                    Sign in
+                    Ingresar
                 </button>
                 </div>
             </form>
 
             <p className="mt-10 text-center text-sm text-gray-500">
                 No eres miembro aun?{' '}
-                <a href="#" className="font-semibold leading-6 text-blue-800 hover:text-blue-600">
+                <a href={'/sign-up'} className="font-semibold leading-6 text-blue-800 hover:text-blue-600">
                     Registrate aqui
                 </a>
             </p>

@@ -45,7 +45,7 @@ export default function ImagenCabecera(){
                         </div>
                     </div>
 
-                    <a href="#" className="inline-block rounded-md border border-transparent bg-gradient-to-r from-blue-900 to-blue-950 px-8 py-3 text-center font-medium text-white">Ver categoria</a>
+                    <a href={'#categorias'} className="inline-block rounded-md border border-transparent bg-gradient-to-r from-blue-900 to-blue-950 px-8 py-3 text-center font-medium text-white">Ver categorias</a>
                     </div>
                 </div>
                 </div>

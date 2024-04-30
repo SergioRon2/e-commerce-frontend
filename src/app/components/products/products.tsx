@@ -5,6 +5,10 @@ import Image from 'next/image'
 
 export default function ProductsComponent({ cantidadProductos = 5000 }){
 
+    const viewProducts = (id:any) =>{
+        window.location.href = `/view-product?id=${id}`
+    }
+
     const [products, setProducts] = useState([])
 
     useEffect(()=>{
@@ -48,10 +52,11 @@ export default function ProductsComponent({ cantidadProductos = 5000 }){
                             </div>
                             <div className="p-6 pt-0">
                             <button
+                                onClick={()=>{viewProducts(product.id)}}
                                 className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                 type="button"
                             >
-                                Add to Cart
+                                Ver producto
                             </button>
                             </div>
                         </div>

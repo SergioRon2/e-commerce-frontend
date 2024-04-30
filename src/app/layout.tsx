@@ -5,6 +5,8 @@ import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import { usePathname } from "next/navigation";
 import HeadLinks from "./components/headlinks/headlinks";
+import { useEffect, useState } from "react";
+import Loading from "./components/loading/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +17,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const pathname = usePathname()
   const pageNotNavbar = pathname === '/login' || pathname === '/sign-up'
 
@@ -22,9 +34,17 @@ export default function RootLayout({
     <html lang="en">
       <HeadLinks />
       <body className={inter.className}>
-        {!pageNotNavbar && <Navbar />}
-        {children}
-        <Footer />
+        {
+          loading ? (
+            <Loading />
+          ) : (
+            <>
+              {!pageNotNavbar && <Navbar />}
+              {children}
+              <Footer />
+            </>
+          )
+        }
       </body>
     </html>
   );
