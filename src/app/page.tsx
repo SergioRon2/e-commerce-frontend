@@ -9,7 +9,7 @@ export default function Home() {
   return <>
     <Banner />
     <Categories />
-    <h1 className="text-center font-bold-400 text-3xl my-12 ">Estos son algunos de los productos mas vendidos</h1>
+    <h1 className="text-center text-black font-bold-400 text-3xl my-12 ">Estos son algunos de los productos mas vendidos</h1>
     <Products cantidadProductos={20} />
     <RecommendedProducts/>
   </>;

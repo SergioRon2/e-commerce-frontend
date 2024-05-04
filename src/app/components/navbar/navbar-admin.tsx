@@ -1,14 +1,38 @@
 'use client'
-import { Collapse, Dropdown, initTWE } from "tw-elements";
-import { useEffect } from "react";
+import { Collapse, Dropdown, initTWE, Offcanvas, Ripple, } from "tw-elements";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import DrawerOferts from "../drawer/drawer-oferts";
+import DrawerEmployees from "../drawer/drawer-employees";
+import DrawerProducts from "../drawer/drawer-products";
 
 
-export default function Navbar(){
+export default function NavbarAdmin(){
 
     useEffect(()=>{
-        initTWE({ Collapse, Dropdown });
+        initTWE({ Collapse, Dropdown, Offcanvas, Ripple });
     }, [])
+
+    const [isOpenEmployees, setIsOpenEmployees] = useState(false);
+
+    function toggleDrawerEmployees(){
+        setIsOpenEmployees(!isOpenEmployees);
+    };
+
+    const [isOpenProducts, setIsOpenProducts] = useState(false);
+
+
+    function toggleDrawerProducts(){
+        setIsOpenProducts(!isOpenProducts);
+    };
+
+
+    const [isOpenOferts, setIsOpenOferts] = useState(false);
+
+    function toggleDrawerOferts(){
+        setIsOpenOferts(!isOpenOferts);
+    };
+
 
     return <>
         <nav
@@ -42,7 +66,7 @@ export default function Navbar(){
             data-twe-collapse-item>
             <a
                 className="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
-                href={'/'}>
+                href={'/dashboard'}>
                 <Image
                 src={'/favicon.ico'}
                 height={25}
@@ -58,54 +82,76 @@ export default function Navbar(){
                 <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
                 <a
                     className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                    href={'/'}
+                    href={'/dashboard'}
                     data-twe-nav-link-ref
-                    >Inicio</a>
+                    >Dashboard</a>
                 </li>
 
 
-                <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                
-                <a
-                    className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                    href={'/historial'}
-                    data-twe-nav-link-ref
-                    >Historial</a>
+                <li className="mb-4 lg:mb-0 lg:pe-2"> 
+
+                    <a className="text-black/60 select-none cursor-pointer transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2 disabled:opacity-50 disabled:pointer-events-none" onClick={toggleDrawerEmployees}>
+                    Empleados
+                    </a>
+
+                    <DrawerEmployees toggleDrawer={toggleDrawerEmployees} isOpen={isOpenEmployees} name={"Empleados"}>
+                        <ul className="mt-8 select-none flex flex-col items-center gap-y-6">
+                            <li>
+                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Nomina de empleados</a>
+                            </li>
+                            <li>
+                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Gestionar empleados</a>
+                            </li>
+                            <li>
+                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Ingresar empleados</a>
+                            </li>
+                        </ul>
+                    </DrawerEmployees>
+
                 </li>
+
+
+                <li className="mb-4 lg:mb-0 lg:pe-2">
                 
-                <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                <a
-                    className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                    href={'/products'}
-                    data-twe-nav-link-ref
-                    >Productos</a>
+                    <a className="text-black/60 select-none cursor-pointer transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2 disabled:opacity-50 disabled:pointer-events-none" onClick={toggleDrawerProducts}>
+                        Productos
+                        </a>
+
+                    <DrawerProducts toggleDrawer={toggleDrawerProducts} isOpen={isOpenProducts} name={"Productos"}>
+                        <ul className="mt-8 select-none flex flex-col items-center gap-y-6">
+                            <li>
+                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Gestionar productos</a>
+                            </li>
+                            <li>
+                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Ingresar productos</a>
+                            </li>
+                        </ul>
+                    </DrawerProducts>
+
+                </li>
+
+
+                <li className="mb-4 lg:mb-0 lg:pe-2">
+                
+                    <a className="text-black/60 select-none cursor-pointer transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2 disabled:opacity-50 disabled:pointer-events-none" onClick={toggleDrawerOferts}>
+                        Ofertas
+                        </a>
+
+                    <DrawerOferts toggleDrawer={toggleDrawerOferts} isOpen={isOpenOferts} name={"Ofertas"}>
+                        <ul className="mt-8 select-none flex flex-col items-center gap-y-6">
+                            <li>
+                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Gestionar ofertas</a>
+                            </li>
+                            <li>
+                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Ingresar ofertas</a>
+                            </li>
+                        </ul>
+                    </DrawerOferts>
+
                 </li>
             </ul>
             
             </div>
-            <div className="ms-5 hidden transition duration-300 ease-in-out lg:flex w-[25%] focus:w-[30%] items-center justify-between">
-                <input
-                type="search"
-                className="text-white relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-1.5 font-normal text-surface transition duration-300 ease-in-out focus:border-primary focus:text-white-700 focus:shadow-inset focus:outline-none motion-reduce:transition duration-300 ease-in-out dark:border-white/10 dark:bg-body-dark dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill"
-                placeholder="Buscar"
-                aria-label="Search"
-                aria-describedby="button-addon2" />
-
-                <span
-                className="flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-gray-600 dark:text-white [&>svg]:w-5"
-                id="basic-addon2">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path
-                    fill-rule="evenodd"
-                    d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                    clip-rule="evenodd" />
-                </svg>
-                </span>
-            </div>
-            
             <div className="relative flex items-center">
             <a className="me-4 text-neutral-600 dark:text-white" href="#">
                 <span className="[&>svg]:w-5">
@@ -225,6 +271,6 @@ export default function Navbar(){
             </div>
             </div>
         </div>
-        </nav>
+        </nav> 
     </>
 }

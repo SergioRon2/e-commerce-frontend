@@ -1,12 +1,17 @@
 .flexContainer {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: #0003;
-    z-index: 99;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: #0004;
     display: flex;
 }
-
+@media (max-width:992px) {
+    .flexContainer{
+        width: auto;
+        height: 400px;
+        background-color: transparent;
+    }
+}
 .dotSpinner {
     display: flex;
     margin: auto;

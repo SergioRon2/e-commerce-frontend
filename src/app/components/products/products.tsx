@@ -12,13 +12,13 @@ export default function ProductsComponent({ cantidadProductos = 5000 }){
     const [products, setProducts] = useState([])
 
     useEffect(()=>{
-        const fetchproducts = async() =>{
+        const fetchProducts = async() =>{
             const res = await axios.get('https://jsonplaceholder.typicode.com/photos')
             const randomizedProducts = res.data.sort(() => Math.random() - 0.5);
             setProducts(randomizedProducts.slice(0, cantidadProductos))
             console.log(res)
         }
-        fetchproducts()
+        fetchProducts()
     }, [cantidadProductos])
 
     return (

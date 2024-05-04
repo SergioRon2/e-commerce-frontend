@@ -28,8 +28,9 @@ export default function RootLayout({
   }, []);
 
   const pathname = usePathname()
-  const pageNotNavbar = pathname === '/login' || pathname === '/sign-up'
-
+  const pageNotNavbar = pathname === '/login' || pathname === '/sign-up' || pathname === '/dashboard' || pathname === '/dashboard/add-employed'
+  const pageNotFooter = pathname === '/dashboard' 
+  
   return (
     <html lang="en">
       <HeadLinks />
@@ -41,7 +42,7 @@ export default function RootLayout({
             <>
               {!pageNotNavbar && <Navbar />}
               {children}
-              <Footer />
+              {!pageNotFooter && <Footer />}
             </>
           )
         }

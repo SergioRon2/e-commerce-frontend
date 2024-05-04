@@ -9,7 +9,7 @@ export default function NotFound(){
     const ruta = usePathname()
 
     return (
-        <main className="flex justify-center max-h-screen items-center bg-white">
+        <main className="flex justify-center max-h-screen items-center text-black bg-white">
             <div className="text-center w-full sm:w-1/2 flex flex-col m-auto select-none animate-fade-up">
                 <p className="text-3xl sm:text-4xl font-semibold text-blue-800">404</p>
                 <h1 className="mt-4 text-3xl font-bold tracking-tight text-blue-900 sm:text-5xl">Pagina no encontrada</h1>
