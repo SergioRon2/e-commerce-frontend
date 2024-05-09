@@ -5,6 +5,7 @@ import Image from "next/image";
 import DrawerOferts from "../drawer/drawer-oferts";
 import DrawerEmployees from "../drawer/drawer-employees";
 import DrawerProducts from "../drawer/drawer-products";
+import { usePathname } from "next/navigation";
 
 
 export default function NavbarAdmin(){
@@ -103,7 +104,7 @@ export default function NavbarAdmin(){
                                 <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Gestionar empleados</a>
                             </li>
                             <li>
-                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Ingresar empleados</a>
+                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href={"dashboard/add-employed"}>Ingresar empleados</a>
                             </li>
                         </ul>
                     </DrawerEmployees>
@@ -123,7 +124,7 @@ export default function NavbarAdmin(){
                                 <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Gestionar productos</a>
                             </li>
                             <li>
-                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Ingresar productos</a>
+                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href={"dashboard/add-product"}>Ingresar productos</a>
                             </li>
                         </ul>
                     </DrawerProducts>
@@ -143,7 +144,7 @@ export default function NavbarAdmin(){
                                 <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Gestionar ofertas</a>
                             </li>
                             <li>
-                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href="">Ingresar ofertas</a>
+                                <a className="transition duration-300 ease-in-out hover:text-gray-400" href={"dashboard/add-offer"}>Ingresar ofertas</a>
                             </li>
                         </ul>
                     </DrawerOferts>

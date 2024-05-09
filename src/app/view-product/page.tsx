@@ -52,7 +52,6 @@ const ViewproductView = () => {
                     <h1>*****</h1>    
                     <div className="flex flex-col gap-4 lg:justify-start lg:flex-row">
                         <button className="bg-blue-800 transition duration-300 ease-in-out h-10 hover:bg-blue-700 w-full lg:w-64 text-white" type="submit">Añadir al carrito</button>
-                        <button className="bg-white transition duration-300 ease-in-out h-10 border border-gray-200 hover:bg-gray-100 w-full lg:w-64" type="submit">Añadir a favoritos</button>
                     </div>
                     <div className="">
                         <h6 className="text-gray-600">Descripcion</h6>

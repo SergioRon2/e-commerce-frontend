@@ -1,10 +1,10 @@
 import NavbarAdmin from '@/app/components/navbar/navbar-admin'
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 
-export default function Example() {
+export default function AddEmployed() {
         return <>
             <NavbarAdmin /> 
-            <form className='p-16'>
+            <form className='p-16 select-none'>
                 <h1 className='font-bold text-3xl text-center text-black mb-6 lg:m-auto'>Agregar empleado</h1>
                 <div className="space-y-12 lg:p-12">
                 <div className="border-b border-gray-900/10 pb-12">
@@ -20,12 +20,14 @@ export default function Example() {
                             Nombre(s)
                             </label>
                             <div className="mt-2">
-                            <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <div className="flex rounded-md shadow-sm ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-900 sm:max-w-md">
                             <input
                                 type="text"
-                                className="relative m-0 block flex-auto rounded-s border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-blue-900 focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 dark:autofill:shadow-autofill dark:focus:border-primary lg:w-64"
+                                className="relative m-0 block flex-auto rounded-s border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-black font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-blue-900 focus:shadow-inset focus:outline-none motion-reduce:transition-none lg:w-64"
                                 placeholder="Nombre(s)"
-                                aria-label="Nombres" />
+                                aria-label="Nombres"
+                                required
+                                />
                             </div>
                             </div>
                         </div>
@@ -34,12 +36,14 @@ export default function Example() {
                             Apellido(s)
                             </label>
                             <div className="mt-2">
-                            <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <div className="flex rounded-md shadow-sm ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-900 sm:max-w-md">
                             <input
                                 type="text"
-                                className="relative m-0 block flex-auto rounded-s border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-blue-900 focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 dark:autofill:shadow-autofill dark:focus:border-primary lg:w-64"
+                                className="relative m-0 block flex-auto rounded-s border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-black font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-blue-900 focus:shadow-inset focus:outline-none motion-reduce:transition-none lg:w-64"
                                 placeholder="Apellido(s)"
-                                aria-label="Apellidos" />
+                                aria-label="Apellidos" 
+                                required
+                                />
                             </div>
                             </div>
                         </div>
@@ -47,13 +51,15 @@ export default function Example() {
                             <label htmlFor="cedula" className="block text-sm font-medium leading-6 text-gray-900">
                             Cedula
                             </label>
-                            <div className="mt-2">
-                            <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <div className="mt-2 ">
+                            <div className="flex rounded-md shadow-sm ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-900 sm:max-w-md">
                             <input
-                                type="text"
-                                className="relative m-0 block flex-auto rounded-s border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-blue-900 focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:text-white dark:placeholder:text-neutral-200 dark:autofill:shadow-autofill dark:focus:border-primary lg:w-64"
+                                type="number"
+                                className="relative m-0 block flex-auto rounded-s border border-solid border-neutral-200 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-black font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-neutral-500 focus:z-[3] focus:border-blue-900 focus:shadow-inset outline-none motion-reduce:transition-none lg:w-64"
                                 placeholder="Cedula"
-                                aria-label="Cedula" />
+                                aria-label="Cedula" 
+                                required
+                                />
                             </div>
                             </div>
                         </div>
@@ -68,8 +74,9 @@ export default function Example() {
                             id="about"
                             name="about"
                             rows={3}
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block pl-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
                             defaultValue={''}
+                            required
                         />
                         </div>
                         <p className="mt-3 text-sm leading-6 text-gray-600">Digite su experiencia laboral.</p>
@@ -81,12 +88,12 @@ export default function Example() {
                         </label>
                         <div className="mt-2 flex items-center gap-x-3">
                         <UserCircleIcon className="h-12 w-12 text-gray-300" aria-hidden="true" />
-                        <button
-                            type="button"
-                            className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                        >
-                            Cambiar
-                        </button>
+                        <input
+                            type="file"
+                            name=''
+                            id=''
+                            className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"    
+                            />
                         </div>
                     </div>
         
@@ -108,7 +115,9 @@ export default function Example() {
                             name="email"
                             type="email"
                             autoComplete="email"
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            placeholder='ejemplo@email.com'
+                            className="block pl-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
+                            required
                         />
                         </div>
                     </div>
@@ -122,8 +131,9 @@ export default function Example() {
                             id="about"
                             name="about"
                             rows={3}
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full pl-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
                             defaultValue={''}
+                            required
                         />
                         </div>
                         <p className="mt-3 text-sm leading-6 text-gray-600">Digite su cargo en la empresa.</p>
@@ -139,7 +149,8 @@ export default function Example() {
                             name="street-address"
                             id="street-address"
                             autoComplete="street-address"
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full pl-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
+                            required
                         />
                         </div>
                     </div>
@@ -153,8 +164,9 @@ export default function Example() {
                             id="about"
                             name="about"
                             rows={3}
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full pl-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
                             defaultValue={''}
+                            required
                         />
                         </div>
                         <p className="mt-3 text-sm leading-6 text-gray-600">Digite sus habilidades.</p>
@@ -170,7 +182,8 @@ export default function Example() {
                             name="city"
                             id="city"
                             autoComplete="address-level2"
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full pl-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
+                            required
                         />
                         </div>
                     </div>
@@ -185,7 +198,8 @@ export default function Example() {
                             name="region"
                             id="region"
                             autoComplete="address-level1"
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full pl-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
+                            required
                         />
                         </div>
                     </div>
@@ -200,7 +214,8 @@ export default function Example() {
                             name="postal-code"
                             id="postal-code"
                             autoComplete="postal-code"
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full pl-4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
+                            required
                         />
                         </div>
                     </div>
@@ -210,13 +225,13 @@ export default function Example() {
         
                 <div className="mb-6 flex items-center justify-end gap-x-6">
                 <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
-                    Cancel
+                    Cancelar
                 </button>
                 <button
                     type="submit"
                     className="rounded-md bg-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 >
-                    Save
+                    Guardar
                 </button>
                 </div>
             </form>

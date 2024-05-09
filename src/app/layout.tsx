@@ -28,7 +28,7 @@ export default function RootLayout({
   }, []);
 
   const pathname = usePathname()
-  const pageNotNavbar = pathname === '/login' || pathname === '/sign-up' || pathname === '/dashboard' || pathname === '/dashboard/add-employed'
+  const pageNotNavbar = pathname === '/login' || pathname === '/sign-up' || pathname === '/dashboard' || pathname === '/dashboard/add-employed' || pathname === '/dashboard/add-product' || pathname === '/dashboard/add-offer'
   const pageNotFooter = pathname === '/dashboard' 
   
   return (
