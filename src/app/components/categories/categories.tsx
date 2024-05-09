@@ -41,8 +41,8 @@ export default function Categories(){
                     <h2 className="text-2xl font-bold text-blue-950">Categorias</h2>    
         
                     <div className="mt-6 h-full flex justify-center items-center flex-wrap sm:gap-x-6 lg:gap-x-6 lg:space-y-0">     
-                    {callouts.map((callout) => (
-                        <div key={callout.name} className={classNames("relative w-64", [StyleCategory.filterToCategory] )}>
+                    {callouts.map((callout, index) => (
+                        <div key={index} className={classNames("relative w-64", [StyleCategory.filterToCategory] )}>
                         <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 sm:h-64">
                             <Image
                             src={callout.imageSrc}

@@ -29,9 +29,9 @@ export default function Navbar(){
                 viewBox="0 0 24 24"
                 fill="currentColor">
                 <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                    clip-rule="evenodd" />
+                    clipRule="evenodd" />
                 </svg>
             </span>
             </button>
@@ -99,9 +99,9 @@ export default function Navbar(){
                     viewBox="0 0 20 20"
                     fill="currentColor">
                     <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                    clip-rule="evenodd" />
+                    clipRule="evenodd" />
                 </svg>
                 </span>
             </div>
@@ -138,9 +138,9 @@ export default function Navbar(){
                     viewBox="0 0 24 24"
                     fill="currentColor">
                     <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
-                        clip-rule="evenodd" />
+                        clipRule="evenodd" />
                     </svg>
                 </span>
                 
