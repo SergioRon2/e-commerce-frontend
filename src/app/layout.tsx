@@ -32,7 +32,7 @@ export default function RootLayout({
   const pageNotFooter = pathname === '/dashboard' 
   
   return (
-    <html lang="en">
+    <>
       <HeadLinks />
       <body className={inter.className}>
         {
@@ -47,6 +47,6 @@ export default function RootLayout({
           )
         }
       </body>
-    </html>
+    </>
   );
 }
